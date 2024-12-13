@@ -8,7 +8,7 @@ from src.logger import logging
 from src.exception import CustomException
 from flask import request
 from src.constant import *
-from src.utils.main_utils import Mainutils
+from src.utils.main_utils import MainUtils
 from dataclasses import dataclass
 
 
@@ -24,7 +24,7 @@ class PredictionPipelineConfig:
 class PredictionPipeline:
     def __init__(self, request:request):
         self.request = request
-        self.utils = Mainutils()
+        self.utils = MainUtils()
         self.prediction_pipeline_config = PredictionPipelineConfig()
 
     def save_input_files(self)-> str:
@@ -56,7 +56,7 @@ class PredictionPipeline:
         except Exception as e:
             raise CustomException(e,sys)
         
-    def get_predicted_dataframe(self, input_dataframe_path: pd.Dataframe):
+    def get_predicted_dataframe(self, input_dataframe_path: pd.DataFrame):
         try:
             prediction_column_name:str = TARGET_COLUMN
             input_dataframe: pd.DataFrame = pd.read_csv(input_dataframe_path)

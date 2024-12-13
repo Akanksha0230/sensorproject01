@@ -10,7 +10,7 @@ from src.constant import *
 from src.exception import CustomException
 from src.logger import logging
 
-class Mainutils:
+class MainUtils:
     def __init__(self)-> None:
         pass
     def read_yaml_file(self,filename:str)-> dict:
