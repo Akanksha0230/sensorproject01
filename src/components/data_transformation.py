@@ -46,7 +46,7 @@ class Datatransformation:
             scaler_step = ('scaler',RobustScaler())
 
             preprocessor= Pipeline(
-                step1=[
+                steps=[
                     imputer_step,
                     scaler_step
                 ]
