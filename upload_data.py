@@ -26,3 +26,4 @@ client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
 
 
 
+
