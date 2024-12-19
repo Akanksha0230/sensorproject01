@@ -21,3 +21,4 @@ json_record=list(json.loads(df.T.to_json()).values())
 
 client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
 
+
